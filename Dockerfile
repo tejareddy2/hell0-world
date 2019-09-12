@@ -1,5 +1,4 @@
-# Pull base image 
-# Pull base image 
+# Pull base image  
 # edited by teja
 From tomcat:8-jre8 
 
