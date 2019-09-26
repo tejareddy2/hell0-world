@@ -2,24 +2,30 @@ while [ -n "$1" ]; do # while loop starts
   case "$1" in
   --front)
     imagesFilter[0]=front
+    echo "${green}front images are taken backup${reset}"
     ;;
   --data)
     imagesFilter[1]=data
+    echo "${green}data images are taken backup${reset}"
     ;;
   --tools)
     imagesFilter[2]=tools
+    echo "${green}tools images are taken backup${reset}"
     ;;
   --data,front | --front,data)
+    echo "${green}front & data images are taken backup${reset}"
     imagesFilter[0]=front
     imagesFilter[1]=data
     ;;
   --tools,front | --front,tools)
     imagesFilter[0]=front
     imagesFilter[2]=tools
+    echo "${green}front and tools images are taken backup${reset}"
     ;;
   --tools,data | --data,tools)
     imagesFilter[1]=data
     imagesFilter[2]=tools
+    echo "${green}tools & data images are taken backup${reset}"
     ;;
   -f | --from)
     if [ -z "$2" ]; then
